@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>System Regional 2018</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="intro"
+					data-markdown="mkdown/intro.md"
+					data-separator="^\r?\n\r?\n\r?\n"
+					data-separator-vertical="^\r?\n\r?\n"
+					data-notes="^Notes:"
+					data-charset="utf-8"
+					>
+				</section>
+				<section id="capone"
+					data-markdown="mkdown/video.md"
+					data-separator="^\r?\n\r?\n\r?\n"
+					data-separator-vertical="^\r?\n\r?\n"
+					data-notes="^Notes:"
+					data-charset="utf-8"
+					>
+				</section>
+				<section id="welfanalysis">
+					<h2>Steps to welfare analysis</h2>
+						<ul class="fa-ul">
+							<li><span class="fa-li"><i class="fas fa-balance-scale"></i></span>Take a moral stance</li>
+							<ul>
+								<li class="li-small">Utilitarianism</li>
+								<li class="li-small">Kaldor-Hicks</li>
+								<li class="li-small">Compensation principle</li>
+								<li class="li-small">Rawlsianism</li>
+								<li class="li-small">Egalitarianism</li>
+							</ul>
+							<br>
+							<li><span class="fa-li"><i class="fas fa-thumbs-up"></i></span>Go with it <em>all the way</em></li>
+							<ul>
+								<li class="li-small">Oppose or advocate removing MID</li>
+							</ul>
+						</ul>
+				</section>
+				<section id="summary">
+				<h2>Summary of paper</h2>
+					<ul>
+						<li>Model</li>
+						<li>Data</li>
+						<li>Welfare</li>
+					</ul>
+				</section>
+				<section id="model">
+					<h2>Model comments</h2>
+					<ul>
+						<li>Policies $~\{t,T\}~$ as exogenous</li>
+						<ul>
+							<li class="li-small">Government is soulless and brainless</li>
+							<li class="li-small">Housing policies are special</li>
+							<li class="li-small">Need a tale of social justice</li>
+						</ul>
+						<br>
+						<li>Elasticities $~\{\zeta,\varepsilon\}~$ as constants</li>
+						<ul>
+							<li class="li-small">Taylor expansions buy nice Harberger triangles, but</li>
+							<li class="li-small">How reasonable are the approximations when <em>removing</em> subsidies?</li>
+						</ul>
+					</ul>
+				</section>
+				<section id="data">
+					<h2>Data comments</h2>
+						<ul>
+							<li>Main effort of paper</li>
+							<ul>
+							<li class="li-small">Matching data to various objects in the model</li>
+							<li class="li-small">No comments</li>
+							</ul>
+						</ul>
+				</section>
+				<section id="welfare">
+					<h2>Welfare comments</h2>
+						<ul>
+							<li>Welfare analysis is main contribution</li>
+							<ul>
+								<li class="li-small">Welfare numbers are pushed back (section 4.3)</li>
+								<li class="li-small">Efficiency gains are <em>modest</em> but still positive, so</li>
+							</ul>
+							<br>
+							<li>Take the moral stance all the way...</li>
+							<ul>
+								<li class="li-small">What's best for society?</li>
+								<li class="li-small">Would my Congressman use your results to make a case?</li>
+
+							</ul>
+						</ul>
+				</section>
+				<section id="numbers">
+					<h2>Bring welfare to the front</h2>
+					<ul>
+						<li>Where are all these numbers:
+					<ul>
+						<li class="li-small">LTV <em>sufficiently low</em> that hurts borrowers?</li>
+						<li class="li-small">Sum of homebuyers losses?</li>
+						<li class="li-small">Dollar difference with or without <em>price effects?</em></li>
+						<li class="li-small">Efficiency <em>gains</em> v. <em>welfare losses</em>?</li>
+					</ul>
+							
+						</li>
+					</ul>
+				</section>
+				<section id="website">
+					<h3>
+						<a href="https://rubenhm.org/talks/sysreg2019"><i class="fab fa-chrome"></i> rubenhm.org/talks/sysreg2019</a>
+					</h3>
+					<div id="qrcode">
+					</div>
+					<br>
+					<a href="https://rubenhm.org/talks/sysreg2019/?print-pdf"><i class="fas fa-file-pdf"></i> Print to PDF in Chrome browser</a>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal.js/js/reveal.js"></script>
+		<script src="qrcodejs/jquery.min.js"></script>
+		<script src="qrcodejs/qrcode.js"></script>
+		<script type="text/javascript">
+				new QRCode(document.getElementById("qrcode"), {
+					text: "https://rubenhm.org/talks/sysreg2019",
+					width: 400,
+					height: 400});
+				$("#qrcode > img").css({"margin":"auto"});
+		</script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+				// Display the page number of the current slide
+				slideNumber: 'c/t',
+				// Vertical centering of slides
+				center: false,
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// MathJax
+					{ src: 'reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
