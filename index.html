@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
-
+		
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 		<!-- FontAwesome -->
@@ -21,11 +21,20 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+			</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section id="website">
+					<h3>
+						<a href="https://rubenhm.org/talks/sysreg2019"><i class="fab fa-chrome"></i>
+							rubenhm.org/talks/sysreg2019</a>
+					</h3>
+					<br>
+					<div id="qrcode">
+					</div>
+				</section>
 
 				<section id="intro"
 					data-markdown="mkdown/intro.md"
@@ -35,107 +44,184 @@
 					data-charset="utf-8"
 					>
 				</section>
-				<section id="capone"
-					data-markdown="mkdown/video.md"
-					data-separator="^\r?\n\r?\n\r?\n"
-					data-separator-vertical="^\r?\n\r?\n"
-					data-notes="^Notes:"
-					data-charset="utf-8"
-					>
+				<section id="public"
+					data-state="video"
+				>
+					<h3>Public school efficiency</h3>
+					<br>
+						<aside class="notes">
+							Here is my idea of public schools technology.
+						</aside>
+					<!-- https://stackoverflow.com/questions/22604934/html5-increase-youtube-speed-2x-from-url -->
+					<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+						<div id="player"></div>
+						<script>
+						// 2. This code loads the IFrame Player API code asynchronously.
+						var tag = document.createElement('script');
+
+						tag.src = "https://www.youtube.com/iframe_api";
+						var firstScriptTag = document.getElementsByTagName('script')[0];
+						firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+						// 3. This function creates an <iframe> (and YouTube player)
+						//    after the API code downloads.
+						var player;
+						function onYouTubeIframeAPIReady() {
+							player = new YT.Player('player', {
+								height: '450',
+								width: '460',
+								videoId: 'Nlfa5v3ullg',
+								events: {
+									'onReady': onPlayerReady
+								}
+							});
+						}
+
+						// 4. The API will call this function when the video player is ready.
+						function onPlayerReady(event) {
+							Reveal.addEventListener( 'video', function() {
+								player.setPlaybackRate(3);
+								event.target.playVideo();
+							} );
+						}
+					</script>
 				</section>
-				<section id="welfanalysis">
-					<h2>Steps to welfare analysis</h2>
-						<ul class="fa-ul">
-							<li><span class="fa-li"><i class="fas fa-balance-scale"></i></span>Take a moral stance</li>
-							<ul>
-								<li class="li-small">Utilitarianism</li>
-								<li class="li-small">Kaldor-Hicks</li>
-								<li class="li-small">Compensation principle</li>
-								<li class="li-small">Rawlsianism</li>
-								<li class="li-small">Egalitarianism</li>
-							</ul>
-							<br>
-							<li><span class="fa-li"><i class="fas fa-thumbs-up"></i></span>Go with it <em>all the way</em></li>
-							<ul>
-								<li class="li-small">Oppose or advocate removing MID</li>
-							</ul>
-						</ul>
+				<section id="outline">
+					<h2>Outline</h2>
+					<ul>
+						<li>Summary</li>
+						<li>Estimation</li>
+						<li>Political economy</li>
+					</ul>
 				</section>
 				<section id="summary">
-				<h2>Summary of paper</h2>
-					<ul>
-						<li>Model</li>
-						<li>Data</li>
-						<li>Welfare</li>
-					</ul>
-				</section>
-				<section id="model">
-					<h2>Model comments</h2>
-					<ul>
-						<li>Policies $~\{t,T\}~$ as exogenous</li>
-						<ul>
-							<li class="li-small">Government is soulless and brainless</li>
-							<li class="li-small">Housing policies are special</li>
-							<li class="li-small">Need a tale of social justice</li>
+					<h2>Summary of paper</h2>
+					<ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-chart-line"></i></span>Econometrics</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-dollar-sign"></i></span><i>Cost function</i>
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Contribution: <i>LMA
+								fixed effects, systematic IV selection</i>
+							</li>
 						</ul>
 						<br>
-						<li>Elasticities $~\{\zeta,\varepsilon\}~$ as constants</li>
+						<li><span class="fa-li"><i class="fas fa-tools"></i></span>Provide tools to policymakers</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="far fa-money-bill-alt"></i></span><i>Cost index, cost-adjusted
+								spending, spending-to-cost ratio</i>
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-balance-scale"></i></span>Evaluation: <i>equity</i>,
+								<i>adequacy</i> </li>
+								<li class="li-small"><span class="fa-li"><i class="fas fa-money-check-alt"></i></span>Recommendation: <i>additional
+									spending</i> needed</li>
+								</ul>
+							</ul>
+				</section>
+				<section id="regression">
+					<h2>Estimation comments (1)</h2>
+						$$\log E = \log C(S,W,P,N) - \log e(M,H,D)$$
 						<ul>
-							<li class="li-small">Taylor expansions buy nice Harberger triangles, but</li>
-							<li class="li-small">How reasonable are the approximations when <em>removing</em> subsidies?</li>
+							<li class="li-small">$C$ is short-term (variable) costs <br>(ignores capital and managerial inputs)</li>
+							<li class="li-small">$E$ excludes transportation and food</li>
+							<li class="li-small">$e$ is efficiency (<i>managerial?</i>)</li>
+							<li class="li-small">$S$ is test scores, graduation rates, or college-bound</li>
+						</ul>
+				</section>
+				<section id="iv">
+					<h2>Estimation comments (2)</h2>
+					<ul>
+						<li>IV selection</li>
+						<ul class="fa-ul">
+							<li class="li-small">
+								<span class="fa-li"><i class="far fa-thumbs-up"></i></span>Reminiscent of spatial lags: $W x$ <br>
+								<i>(Is there spatial autocorrelation in $E$?)</i>
+							</li>
+							<li class="li-small">
+								<span class="fa-li"><i class="far fa-smile"></i></span>Systematic tests of validity
+							</li>
+						</ul>
+						<br>
+						<li>Estimation sample</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-vials"></i></span>Why not SBT scores with ACS 2015?</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>Sample for graduation rates
+								and college bound?</li>
 						</ul>
 					</ul>
 				</section>
-				<section id="data">
-					<h2>Data comments</h2>
-						<ul>
-							<li>Main effort of paper</li>
-							<ul>
-							<li class="li-small">Matching data to various objects in the model</li>
-							<li class="li-small">No comments</li>
-							</ul>
-						</ul>
-				</section>
-				<section id="welfare">
-					<h2>Welfare comments</h2>
-						<ul>
-							<li>Welfare analysis is main contribution</li>
-							<ul>
-								<li class="li-small">Welfare numbers are pushed back (section 4.3)</li>
-								<li class="li-small">Efficiency gains are <em>modest</em> but still positive, so</li>
-							</ul>
-							<br>
-							<li>Take the moral stance all the way...</li>
-							<ul>
-								<li class="li-small">What's best for society?</li>
-								<li class="li-small">Would my Congressman use your results to make a case?</li>
-
-							</ul>
-						</ul>
-				</section>
-				<section id="numbers">
-					<h2>Bring welfare to the front</h2>
+				<section id="polecon">
+					<h2>Political Economy</h2>
 					<ul>
-						<li>Where are all these numbers:
-					<ul>
-						<li class="li-small">LTV <em>sufficiently low</em> that hurts borrowers?</li>
-						<li class="li-small">Sum of homebuyers losses?</li>
-						<li class="li-small">Dollar difference with or without <em>price effects?</em></li>
-						<li class="li-small">Efficiency <em>gains</em> v. <em>welfare losses</em>?</li>
+						<li><i>Cost function?</i></li>
+						<ul class="fa-ul">
+							<li class="li-small">
+								<span class="fa-li">
+									<span class="fa-stack" style="font-size: 0.5em;">
+										<i class="fas fa-ban fa-stack-2x" style="vertical-align:middle;"></i>
+										<i class="fas fa-minus fa-stack-1x"
+											style="font-size:1.3em;vertical-align:middle;"></i>
+									</span>
+								</span>
+								How do school districts minimize costs?</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-crosshairs"></i></span>What is their objective function?
+								<br>What are their choice variables?
+							</li>
+						</ul>
+						<br>
+						<li><i>Competition?</i></li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-flag-checkered"></i></span>How do school districts 
+								compete?</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-percent"></i></span>Districts don't choose tax rates
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="far fa-smile-wink"></i></span>Hernández-Murillo
+								(<i>JPubEcon</i>,
+								2019)</li>
+						</ul>
 					</ul>
-							
+				</section>
+				<section id="punchline">
+					<h2>Punchline</h2>
+					<ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-chalkboard-teacher"></i></span>Poor kids are hard to teach
+							<ul class="fa-ul">
+								<li class="li-small fragment">
+									<span class="fa-li">
+										<span class="fa-stack" style="font-size: 0.5em;">
+											<i class="fas fa-circle fa-stack-2x" style="vertical-align:middle;"></i>
+											<i class="fas fa-certificate fa-stack-1x fa-inverse" style="font-size:1.3em;vertical-align:middle;"></i>
+										</span>
+									</span>
+									<i>“Poor kids are as just as bright as ....” </i>—Joe Biden</li>
+								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-suitcase-rolling"></i></span>Poor kids have lots of
+									baggage</li>
+							</ul>
+						<br>
+						<li class="fragment"><span class="fa-li"><i class="fas fa-cogs"></i></span>Are poor districts less technologically
+							efficient?</li>
+							<ul class="fa-ul">
+								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-sliders-h"></i></span>Poor districts have
+									<i>higher</i> unadjusted spending.</li>
+								<li class="li-small fragment"><span class="fa-li"><i class="far fa-question-circle"></i></span>What they spend
+									it on? 
+									<br>
+									It's not food or transportation.
+									<br>(Probably not <i>better teachers, or administrators.</i>)</li>
+							</ul>	
 						</li>
 					</ul>
 				</section>
-				<section id="website">
-					<h3>
-						<a href="https://rubenhm.org/talks/sysreg2019"><i class="fab fa-chrome"></i> rubenhm.org/talks/sysreg2019</a>
-					</h3>
-					<div id="qrcode">
-					</div>
-					<br>
-					<a href="https://rubenhm.org/talks/sysreg2019/?print-pdf"><i class="fas fa-file-pdf"></i> Print to PDF in Chrome browser</a>
-				</section>
+				<section id="policy">
+					<h2>Food for thought</h2>
+					<ul>
+						<li>School spending probably not best tool for <span class="alert">fighting poverty</span></li>
+						<br>
+						<li>Consider equalizing <span class="alert">technological efficiency</span>
+						<br>
+						instead of spending</li>
+					</ul>
+				</section>		
 			</div>
 		</div>
 
