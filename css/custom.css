@@ -58,3 +58,8 @@ span.alert {
   font-style: italic;
   color: firebrick;
 }
+
+span.alert2 {
+  font-style: italic;
+  color: rgb(204, 101, 17);
+}
