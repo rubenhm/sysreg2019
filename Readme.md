@@ -15,6 +15,5 @@
 3. Summary
     + Estimates _typical_ cost of providing given level of education outcomes.
     + Compares across districts to evaluate _adequacy_ and _equity_ of spending.
-    + 
 
 
