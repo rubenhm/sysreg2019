@@ -44,6 +44,182 @@
 					data-charset="utf-8"
 					>
 				</section>
+				<section id="outline">
+					<h2>Outline</h2>
+					<ul>
+						<li>Summary</li>
+						<li>Estimation</li>
+						<li>Political economy</li>
+					</ul>
+				</section>
+				<section id="summary">
+					<h2>Summary of paper</h2>
+					<ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-chart-line"></i></span>Econometrics</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-dollar-sign"></i></span>Estimation: <i>Cost function</i>
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Contribution: <i>LMA
+								fixed effects, systematic IV selection</i>
+							</li>
+						</ul>
+						<br>
+						<li><span class="fa-li"><i class="fas fa-tools"></i></span>Provide tools to policymakers</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="far fa-money-bill-alt"></i></span><i>Cost index, cost-adjusted
+								spending, spending-to-cost ratio</i>
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-balance-scale"></i></span>Evaluation: <i>equity</i>,
+								<i>adequacy</i> </li>
+								<li class="li-small"><span class="fa-li"><i class="fas fa-money-check-alt"></i></span>Recommendation: <i>additional
+									spending</i> needed</li>
+								</ul>
+							</ul>
+				</section>
+				<section id="regression">
+					<h2>Estimation comments (1)</h2>
+						$$\log E = \log C(S,W,P,N) - \log e(M,H,D)$$
+						<ul>
+							<li class="li-small">$E$ excludes transportation and food</li>
+							<li class="li-small">$C$ is (unobserved) short-term (variable) costs</li>
+							<li class="li-small">$e$ is (unobserved) <span class="alert1">efficiency</span></li>
+							<br>
+							<li class="li-small">$S$ is test scores, graduation rates, or college-bound</li>
+							<li class="li-small">$(P,N)$ are <i>cost factors</i></li>
+						</ul>
+				</section>
+				<section id="iv">
+					<h2>Estimation comments (2)</h2>
+					<ul>
+						<li>IV selection</li>
+						<ul class="fa-ul">
+							<li class="li-small">
+								<span class="fa-li"><i class="far fa-smile"></i></span>Systematic tests of instruments validity
+							</li>
+							<li class="li-small">
+								<span class="fa-li"><i class="far fa-thumbs-up"></i></span>Instruments reminiscent of spatial lags: $W x$ 
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-sync-alt"></i></span>Is there spatial autocorrelation in $E$ or $S$?</li>
+						</ul>
+						<br>
+						<li>Estimation sample</li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-vials"></i></span>Why not use SBT scores with ACS 2015?</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>Sample for graduation rates
+								and college bound?</li>
+						</ul>
+					</ul>
+				</section>
+				<section id="polecon1">
+					<h2>Political Economy (1)</h2>
+					<ul>
+						<li><i>Cost function?</i></li>
+						<ul class="fa-ul">
+							<li class="li-small">
+								<span class="fa-li">
+									<span class="fa-stack" style="font-size: 0.5em;">
+											<i class="fas fa-ban fa-stack-2x" style="vertical-align:middle;"></i>
+											<i class="fas fa-minus fa-stack-1x"
+											style="font-size:1.3em;vertical-align:middle;"></i>
+										</span>
+									</span>
+									<a href="http://hanushek.stanford.edu/publications/what-do-cost-functions-tell-us-about-cost-adequate-education">Costrell, Hanushek, and Loeb (2008)</a>
+							</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-atom"></i></span>Estimates of average spending are not minimum costs
+							</li>
+							<li class="li-small">
+									<span class="fa-li"><i class="fas fa-crosshairs"></i></i></span><span class="alert2">Cost</span> implies <span class="alert1">efficiency</span>: $c(y,w)=\min_{x} \{w \cdot x | y = f(x) \}$
+							</li>
+						</ul>
+						<br>
+						<li><i>Estimation</i></li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-ban"></i></span>How non-cost-factors cancel out of $CI$?</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-balance-scale-left"></i></span>Some districts have $CI<1$ and others have $CI>1$</li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-sync-alt"></i></span>Reestimating after correcting implies further correction?</li>
+						</ul>
+					</ul>
+					<aside class="notes">
+							<ul>
+								<li>Hanushek</li>
+									<ul>
+										<li>"Cost functions" do not tell us the cost of achieving any specified level of performace</li>
+										<li>They provide estimates of <i>average spending</i> for districts of given characteristics</li>
+										<li>They indicate how spending varies by these characteristics</li>
+										<li>Average spending is not the same as minimum efficient cost</li>
+									</ul>
+							</ul>
+					</aside>
+				</section>
+				<section id="polecon2">
+					<h2>Political economy (2)</h2>
+					<ul>
+						<li><i>Competition?</i></li>
+						<ul class="fa-ul">
+							<li class="li-small"><span class="fa-li"><i class="fas fa-cat"></i></span>Examples of <i>competition</i> and <i>copy-cat</i> behaviors?</li>
+							<li class="li-small"><span class="fa-li"><i class="far fa-comment-dots"></i></span>Describe objective function and choice variables</li>
+						</ul>
+						<br>
+						<li><i>Districts are like governments</i></li>
+						<ul class="fa-ul">
+								<li class="li-small"><span class="fa-li"><i class="far fa-smile-wink"></i></span><a href="https://dx.doi.org/10.1016/j.jpubeco.2019.01.012">Hernández-Murillo
+									(<i>JPubEcon</i>, 2019)</a> </li>
+							<li class="li-small"><span class="fa-li"><i class="fas fa-flag-checkered"></i></span>Competition among public agents not always <span class="alert2">efficient</span>
+							</li>
+						</ul>
+					</ul>
+					<aside class="notes">
+						<li>Hernandez-Murillo</li>
+						<ul>
+							<li>Competition among public agents is very different</li>
+							<li>Districts don't even control tax rates</li>
+							<li>What is their objective function and choice variables?</li>
+						</ul>
+
+					</aside>
+				</section>
+				<section id="punchline">
+					<h2>Punchline</h2>
+					<ul class="fa-ul">
+						<li><span class="fa-li"><i class="fas fa-chalkboard-teacher"></i></span>Poor kids are hard to teach
+							<ul class="fa-ul">
+								<li class="li-small fragment">
+									<span class="fa-li">
+										<span class="fa-stack" style="font-size: 0.5em;">
+											<i class="fas fa-circle fa-stack-2x" style="vertical-align:middle;"></i>
+											<i class="fas fa-certificate fa-stack-1x fa-inverse" style="font-size:1.3em;vertical-align:middle;"></i>
+										</span>
+									</span>
+									<i>“Poor kids are as just as bright as ....” </i>—Joe Biden</li>
+								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-suitcase-rolling"></i></span>Poor kids have lots of
+									baggage</li>
+							</ul>
+						<br>
+						<li class="fragment"><span class="fa-li"><i class="fas fa-cogs"></i></span>Why poor districts less technologically
+							efficient?</li>
+							<ul class="fa-ul">
+								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-sliders-h"></i></span>Poor districts have
+									<i>higher</i> unadjusted spending.</li>
+								<li class="li-small fragment"><span class="fa-li"><i class="far fa-question-circle"></i></span>What they spend
+									it on? 
+									<br>
+									<ul>
+										<li>Is it  food or transportation?</li>
+										<li>Is it <i>better teachers, or administrators?</i></li>
+									</ul>								
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</section>
+				<section id="policy">
+					<h2>Final thoughts</h2>
+					<ul>
+						<li class="fragment">Is <i>school spending</i> right for <span class="alert1">fighting poverty?</span></li><br>
+						<li class="fragment">Consider equalizing <span class="alert1">technological efficiency</span></li><br>
+						<li class="fragment">Consider <span class="alert1">long-term labor-market outcomes</span></li>
+					</ul>
+				</section>		
 				<section id="public"
 					data-state="video"
 				>
@@ -86,160 +262,6 @@
 						}
 					</script>
 				</section>
-				<section id="outline">
-					<h2>Outline</h2>
-					<ul>
-						<li>Summary</li>
-						<li>Estimation</li>
-						<li>Political economy</li>
-					</ul>
-				</section>
-				<section id="summary">
-					<h2>Summary of paper</h2>
-					<ul class="fa-ul">
-						<li><span class="fa-li"><i class="fas fa-chart-line"></i></span>Econometrics</li>
-						<ul class="fa-ul">
-							<li class="li-small"><span class="fa-li"><i class="fas fa-dollar-sign"></i></span><i>Cost function</i>
-							</li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Contribution: <i>LMA
-								fixed effects, systematic IV selection</i>
-							</li>
-						</ul>
-						<br>
-						<li><span class="fa-li"><i class="fas fa-tools"></i></span>Provide tools to policymakers</li>
-						<ul class="fa-ul">
-							<li class="li-small"><span class="fa-li"><i class="far fa-money-bill-alt"></i></span><i>Cost index, cost-adjusted
-								spending, spending-to-cost ratio</i>
-							</li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-balance-scale"></i></span>Evaluation: <i>equity</i>,
-								<i>adequacy</i> </li>
-								<li class="li-small"><span class="fa-li"><i class="fas fa-money-check-alt"></i></span>Recommendation: <i>additional
-									spending</i> needed</li>
-								</ul>
-							</ul>
-				</section>
-				<section id="regression">
-					<h2>Estimation comments (1)</h2>
-						$$\log E = \log C(S,W,P,N) - \log e(M,H,D)$$
-						<ul>
-							<li class="li-small">$C$ is short-term (variable) costs</li>
-							<li class="li-small">$E$ excludes transportation and food</li>
-							<li class="li-small">$e$ is efficiency (<span class="alert2">managerial?</span>)</li>
-							<li class="li-small">$S$ is test scores, graduation rates, or college-bound</li>
-						</ul>
-				</section>
-				<section id="iv">
-					<h2>Estimation comments (2)</h2>
-					<ul>
-						<li>IV selection</li>
-						<ul class="fa-ul">
-							<li class="li-small">
-								<span class="fa-li"><i class="far fa-smile"></i></span>Systematic tests of instruments validity
-							</li>
-							<li class="li-small">
-								<span class="fa-li"><i class="far fa-thumbs-up"></i></span>Instruments reminiscent of spatial lags: $W x$ 
-							</li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-sync-alt"></i></span>Is there spatial autocorrelation in $E$ or $S$?</li>
-						</ul>
-						<br>
-						<li>Estimation sample</li>
-						<ul class="fa-ul">
-							<li class="li-small"><span class="fa-li"><i class="fas fa-vials"></i></span>Why not use SBT scores with ACS 2015?</li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>Sample for graduation rates
-								and college bound?</li>
-						</ul>
-					</ul>
-				</section>
-				<section id="polecon">
-					<h2>Political Economy</h2>
-					<ul>
-						<li><i>Cost function?</i></li>
-						<ul class="fa-ul">
-							<li class="li-small">
-								<span class="fa-li">
-									<span class="fa-stack" style="font-size: 0.5em;">
-											<i class="fas fa-ban fa-stack-2x" style="vertical-align:middle;"></i>
-											<i class="fas fa-minus fa-stack-1x"
-											style="font-size:1.3em;vertical-align:middle;"></i>
-										</span>
-									</span>
-									<a href="http://hanushek.stanford.edu/publications/what-do-cost-functions-tell-us-about-cost-adequate-education">Costrell, Hanushek, and Loeb (2008)</a>
-							</li>
-							<li class="li-small">
-									<span class="fa-li"><i class="fas fa-crosshairs"></i></i></span><span class="alert2">Cost</span> implies efficiency: $c(y,w)=\min_{x} \{w \cdot x | y = f(x) \}$
-							</li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-atom"></i></span>Estimates average spending, not minimum costs
-							</li>
-						</ul>
-						<br>
-						<li><i>Competition?</i></li>
-						<ul class="fa-ul">
-								<li class="li-small"><span class="fa-li"><i class="far fa-smile-wink"></i></span><a href="https://dx.doi.org/10.1016/j.jpubeco.2019.01.012">Hernández-Murillo
-									(<i>JPubEcon</i>, 2019)</a> </li>
-							<li class="li-small"><span class="fa-li"><i class="fas fa-flag-checkered"></i></span>Competition among public agents not always <span class="alert2">efficient</span>
-							</li>
-						</ul>
-					</ul>
-					<aside class="notes">
-							<ul>
-								<li>Hanushek</li>
-									<ul>
-										<li>"Cost functions" do not tell us the cost of achieving any specified level of performace</li>
-										<li>They provide estimates of <i>average spending</i> for districts of given characteristics</li>
-										<li>They indicate how spending varies by these characteristics</li>
-										<li>Average spending is not the same as minimum efficient cost</li>
-									</ul>
-								<li>Hernandez-Murillo</li>
-									<ul>
-										<li>Competition among public agents is very different</li>
-										<li>Districts don't even control tax rates</li>
-										<li>What is their objective function and choice variables?</li>
-									</ul>
-							</ul>
-					</aside>
-				</section>
-				<section id="punchline">
-					<h2>Punchline</h2>
-					<ul class="fa-ul">
-						<li><span class="fa-li"><i class="fas fa-chalkboard-teacher"></i></span>Poor kids are hard to teach
-							<ul class="fa-ul">
-								<li class="li-small fragment">
-									<span class="fa-li">
-										<span class="fa-stack" style="font-size: 0.5em;">
-											<i class="fas fa-circle fa-stack-2x" style="vertical-align:middle;"></i>
-											<i class="fas fa-certificate fa-stack-1x fa-inverse" style="font-size:1.3em;vertical-align:middle;"></i>
-										</span>
-									</span>
-									<i>“Poor kids are as just as bright as ....” </i>—Joe Biden</li>
-								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-suitcase-rolling"></i></span>Poor kids have lots of
-									baggage</li>
-							</ul>
-						<br>
-						<li class="fragment"><span class="fa-li"><i class="fas fa-cogs"></i></span>Are poor districts less technologically
-							efficient?</li>
-							<ul class="fa-ul">
-								<li class="li-small fragment"><span class="fa-li"><i class="fas fa-sliders-h"></i></span>Poor districts have
-									<i>higher</i> unadjusted spending.</li>
-								<li class="li-small fragment"><span class="fa-li"><i class="far fa-question-circle"></i></span>What they spend
-									it on? 
-									<br>
-									<ul>
-										<li>Is it  food or transportation?</li>
-										<li>Is it <i>better teachers, or administrators?</i></li>
-									</ul>								
-								</li>
-							</ul>	
-						</li>
-					</ul>
-				</section>
-				<section id="policy">
-					<h2>Final thoughts</h2>
-					<ul>
-						<li class="fragment">Is <i>school spending</i> right for <span class="alert">fighting poverty?</span></li>
-						<li class="fragment">Consider equalizing <span class="alert">technological efficiency</span></li>
-						<li class="fragment">Consider <span class="alert">long-term labor-market outcomes</span></li>
-					</ul>
-				</section>		
 			</div>
 		</div>
 
